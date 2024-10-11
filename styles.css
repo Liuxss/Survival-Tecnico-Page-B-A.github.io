@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+  }
+  
+  .container {
+    width: 1920px; /* Aumentamos el tamaño a 800px de ancho */
+    height: 1080px; /* Aumentamos el tamaño a 500px de alto */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .before-after-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .before-image img, .after-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; 
+    overflow: hidden;
+    clip-path: inset(0 50% 0 0); 
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0;
+    width: 5px; /* Aumentamos el tamaño del slider a 40px */
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    cursor: ew-resize;
+    z-index: 2;
+  }
+  
